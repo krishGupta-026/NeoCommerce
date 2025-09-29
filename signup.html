@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Future - NeoCommerce</title>
+    <link rel="stylesheet" href="signup-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background-container">
+        <div class="particles-bg"></div>
+        <div class="geometric-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
+    <!-- Signup Container -->
+    <div class="signup-container">
+        <!-- Header -->
+        <header class="signup-header">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <span class="logo-text">NeoCommerce</span>
+            </div>
+            <div class="header-actions">
+                <span class="login-prompt">Already have an account?</span>
+                <a href="login.html" class="login-link">Sign In</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="signup-main">
+            <!-- Left Side - Marketing Content -->
+            <div class="marketing-section">
+                <div class="marketing-content">
+                    <h1 class="hero-title">
+                        Join the <span class="gradient-text">Future</span><br>
+                        of Shopping
+                    </h1>
+                    <p class="hero-subtitle">
+                        Create your account and unlock exclusive access to tomorrow's products, 
+                        personalized recommendations, and lightning-fast checkout.
+                    </p>
+                    
+                    <!-- Benefits List -->
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🚀</span>
+                            <div class="benefit-text">
+                                <strong>Lightning Fast Delivery</strong>
+                                <p>Get your orders delivered at warp speed</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🎯</span>
+                            <div class="benefit-text">
+                                <strong>Personalized Experience</strong>
+                                <p>AI-powered recommendations just for you</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">💎</span>
+                            <div class="benefit-text">
+                                <strong>Exclusive Access</strong>
+                                <p>First access to new futuristic products</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🔒</span>
+                            <div class="benefit-text">
+                                <strong>Secure & Safe</strong>
+                                <p>Military-grade security protection</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Signup Form -->
+            <div class="form-section">
+                <div class="form-container">
+                    <!-- Progress Indicator -->
+                    <div class="progress-indicator">
+                        <div class="progress-step active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Basic Info</span>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Preferences</span>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Verification</span>
+                        </div>
+                    </div>
+
+                    <!-- Signup Form -->
+                    <form class="signup-form" id="signupForm">
+                        <!-- Step 1: Basic Information -->
+                        <div class="form-step active" id="step1">
+                            <div class="step-header">
+                                <h2 class="step-title">Create Your Account</h2>
+                                <p class="step-description">Enter your basic information to get started</p>
+                            </div>
+
+                            <!-- Name Fields -->
+                            <div class="name-fields">
+                                <div class="form-group">
+                                    <div class="input-container">
+                                        <input 
+                                            type="text" 
+                                            id="firstName" 
+                                            name="firstName" 
+                                            class="form-input" 
+                                            placeholder="First Name"
+                                            required
+                                        >
+                                        <label for="firstName" class="floating-label">First Name</label>
+                                    </div>
+                                    <div class="error-message" id="firstNameError"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-container">
+                                        <input 
+                                            type="text" 
+                                            id="lastName" 
+                                            name="lastName" 
+                                            class="form-input" 
+                                            placeholder="Last Name"
+                                            required
+                                        >
+                                        <label for="lastName" class="floating-label">Last Name</label>
+                                    </div>
+                                    <div class="error-message" id="lastNameError"></div>
+                                </div>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="form-group">
+                                <div class="input-container">
+                                    <span class="input-icon">📧</span>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        class="form-input" 
+                                        placeholder="Enter your email"
+                                        required
+                                    >
+                                    <label for="email" class="floating-label">Email Address</label>
+                                </div>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+
+                            <!-- Password Field -->
+                            <div class="form-group">
+                                <div class="input-container">
+                                    <span class="input-icon">🔒</span>
+                                    <input 
+                                        type="password" 
+                                        id="password" 
+                                        name="password" 
+                                        class="form-input" 
+                                        placeholder="Create password"
+                                        required
+                                    >
+                                    <label for="password" class="floating-label">Password</label>
+                                    <button type="button" class="password-toggle" id="passwordToggle">
+                                        <span class="toggle-icon">👁️</span>
+                                    </button>
+                                </div>
+                                <div class="error-message" id="passwordError"></div>
+                                <div class="password-strength" id="passwordStrength">
+                                    <div class="strength-indicator">
+                                        <div class="strength-bar"></div>
+                                        <div class="strength-bar"></div>
+                                        <div class="strength-bar"></div>
+                                        <div class="strength-bar"></div>
+                                    </div>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+
+                            <!-- Confirm Password Field -->
+                            <div class="form-group">
+                                <div class="input-container">
+                                    <span class="input-icon">🔐</span>
+                                    <input 
+                                        type="password" 
+                                        id="confirmPassword" 
+                                        name="confirmPassword" 
+                                        class="form-input" 
+                                        placeholder="Confirm password"
+                                        required
+                                    >
+                                    <label for="confirmPassword" class="floating-label">Confirm Password</label>
+                                </div>
+                                <div class="error-message" id="confirmPasswordError"></div>
+                            </div>
+
+                            <!-- Step 1 Actions -->
+                            <div class="step-actions">
+                                <button type="button" class="next-btn" onclick="nextStep(1)">
+                                    Continue
+                                    <span class="btn-arrow">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Preferences -->
+                        <div class="form-step" id="step2">
+                            <div class="step-header">
+                                <h2 class="step-title">Customize Your Experience</h2>
+                                <p class="step-description">Tell us about your preferences</p>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="form-group">
+                                <div class="input-container">
+                                    <span class="input-icon">📱</span>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        class="form-input" 
+                                        placeholder="+91 98765 43210"
+                                    >
+                                    <label for="phone" class="floating-label">Phone Number (Optional)</label>
+                                </div>
+                            </div>
+
+                            <!-- Date of Birth -->
+                            <div class="form-group">
+                                <div class="input-container">
+                                    <span class="input-icon">🎂</span>
+                                    <input 
+                                        type="date" 
+                                        id="dateOfBirth" 
+                                        name="dateOfBirth" 
+                                        class="form-input"
+                                    >
+                                    <label for="dateOfBirth" class="floating-label">Date of Birth (Optional)</label>
+                                </div>
+                            </div>
+
+                            <!-- Shopping Interests -->
+                            <div class="form-group">
+                                <label class="group-label">Shopping Interests</label>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="gaming">
+                                        <span class="checkbox-custom">🎮</span>
+                                        <span class="checkbox-label">Gaming</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="fashion">
+                                        <span class="checkbox-custom">👗</span>
+                                        <span class="checkbox-label">Fashion</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="tech">
+                                        <span class="checkbox-custom">💻</span>
+                                        <span class="checkbox-label">Tech</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="wearables">
+                                        <span class="checkbox-custom">⌚</span>
+                                        <span class="checkbox-label">Wearables</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="footwear">
+                                        <span class="checkbox-custom">👟</span>
+                                        <span class="checkbox-label">Footwear</span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="interests" value="accessories">
+                                        <span class="checkbox-custom">🎒</span>
+                                        <span class="checkbox-label">Accessories</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Newsletter Subscription -->
+                            <div class="form-group">
+                                <div class="checkbox-container special">
+                                    <input type="checkbox" id="newsletter" name="newsletter" class="custom-checkbox">
+                                    <label for="newsletter" class="checkbox-label">
+                                        <span class="checkmark"></span>
+                                        <div class="checkbox-text">
+                                            <strong>Stay updated with future products</strong>
+                                            <p>Get exclusive offers and new product announcements</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 Actions -->
+                            <div class="step-actions">
+                                <button type="button" class="back-btn" onclick="prevStep(2)">
+                                    ← Back
+                                </button>
+                                <button type="button" class="next-btn" onclick="nextStep(2)">
+                                    Continue
+                                    <span class="btn-arrow">→</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Verification & Terms -->
+                        <div class="form-step" id="step3">
+                            <div class="step-header">
+                                <h2 class="step-title">Almost There!</h2>
+                                <p class="step-description">Review and complete your registration</p>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="form-group">
+                                <div class="checkbox-container special">
+                                    <input type="checkbox" id="terms" name="terms" class="custom-checkbox" required>
+                                    <label for="terms" class="checkbox-label">
+                                        <span class="checkmark"></span>
+                                        <div class="checkbox-text">
+                                            <strong>I agree to the Terms & Conditions</strong>
+                                            <p>By signing up, you agree to our <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a></p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="error-message" id="termsError"></div>
+                            </div>
+
+                            <!-- Age Verification -->
+                            <div class="form-group">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="ageVerification" name="ageVerification" class="custom-checkbox" required>
+                                    <label for="ageVerification" class="checkbox-label">
+                                        <span class="checkmark"></span>
+                                        I confirm that I am 18 years or older
+                                    </label>
+                                </div>
+                                <div class="error-message" id="ageError"></div>
+                            </div>
+
+                            <!-- Account Summary -->
+                            <div class="account-summary">
+                                <h4>Account Summary</h4>
+                                <div class="summary-item">
+                                    <span class="summary-label">Name:</span>
+                                    <span class="summary-value" id="summaryName">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Email:</span>
+                                    <span class="summary-value" id="summaryEmail">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Interests:</span>
+                                    <span class="summary-value" id="summaryInterests">-</span>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 Actions -->
+                            <div class="step-actions">
+                                <button type="button" class="back-btn" onclick="prevStep(3)">
+                                    ← Back
+                                </button>
+                                <button type="submit" class="submit-btn" id="submitBtn">
+                                    <span class="btn-text">Create Account</span>
+                                    <span class="btn-loading" style="display: none;">
+                                        <div class="loading-spinner"></div>
+                                        Creating Account...
+                                    </span>
+                                    <span class="btn-icon">🚀</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Social Signup Alternative -->
+                    <div class="social-signup">
+                        <div class="divider">
+                            <span class="divider-text">or sign up with</span>
+                        </div>
+                        <div class="social-buttons">
+                            <button type="button" class="social-btn google">
+                                <span class="social-icon">🚀</span>
+                                Google
+                            </button>
+                            <button type="button" class="social-btn github">
+                                <span class="social-icon">⭐</span>
+                                GitHub
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="signup-footer">
+            <p>© 2024 NeoCommerce. The future of shopping is here.</p>
+        </footer>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content">
+            <div class="success-animation">
+                <div class="success-icon">✅</div>
+            </div>
+            <h3>Welcome to the Future!</h3>
+            <p>Your account has been created successfully. You can now start exploring our futuristic products.</p>
+            <button class="modal-btn" onclick="redirectToHome()">Start Shopping</button>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="signup-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoCommerce - Experience Tomorrow</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <div class="logo-icon">⚡</div>
+          <span class="logo-text">NeoCommerce</span>
+        </div>
+
+        <nav class="navigation">
+          <a href="#home" class="nav-link active">
+            <span class="nav-icon">⚡</span>
+            Home
+          </a>
+          <a href="#products" class="nav-link">
+            <span class="nav-icon">🔷</span>
+            Products
+          </a>
+          <a href="#cart" class="nav-link cart-link">
+            <span class="nav-icon">🛒</span>
+            Cart
+            <span class="cart-count" id="cartCount">0</span>
+          </a>
+          <a href="#admin" class="nav-link">
+            <span class="nav-icon">⚙️</span>
+            Admin
+          </a>
+        </nav>
+
+        <div class="user-section">
+          <div class="user-info">
+            <span class="user-icon">👤</span>
+            <span class="username">krish gupta</span>
+          </div>
+          <button class="logout-btn">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="particles-bg"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="tagline">
+            <span class="tagline-icon">🚀</span>
+            Welcome to the Future of Shopping
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-gradient">NeoCommerce</span>
+            <br />
+            <span class="title-white">Experience Tomorrow</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Step into the future of online shopping with our cutting-edge
+            platform. Discover premium products, lightning-fast delivery, and an
+            experience beyond imagination.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn-primary" onclick="scrollToProducts()">
+              Explore Products
+              <span class="btn-arrow">→</span>
+            </button>
+            <button class="btn-secondary">Watch Demo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="products">
+      <div class="featured-container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Featured <span class="title-gradient">Products</span>
+          </h2>
+          <p class="section-subtitle">
+            Discover our handpicked selection of premium products designed for
+            the future
+          </p>
+        </div>
+
+        <div class="products-grid">
+          <div class="product-card" data-product-id="1">
+            <div class="product-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1577174881658-0f30ed549adc?w=300&h=200&fit=crop"
+                alt="Quantum Gaming Headset"
+                class="product-image"
+              />
+              <div class="product-overlay">
+                <span class="product-category">Gaming</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Quantum Gaming Headset</h3>
+              <p class="product-description">
+                Next-generation gaming headset with spatial audio and neural
+                haptics. Experience games like never before with advanced
+                immersive technology.
+              </p>
+              <div class="product-footer">
+                <div class="price-rating">
+                  <span class="product-price" data-price="15769">₹15,769</span>
+                  <div class="rating">
+                    <span class="star">⭐</span>
+                    <span class="rating-value">4.6</span>
+                  </div>
+                </div>
+                <div class="product-buttons">
+                  <button class="add-to-cart-btn" onclick="addToCart(2)">
+                    Add to Cart
+                  </button>
+                  <button class="view-details-btn">
+                    View Details
+                    <span class="btn-arrow">→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-product-id="2">
+            <div class="product-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=200&fit=crop"
+                alt="Cyber Streetwear Jacket"
+                class="product-image"
+              />
+              <div class="product-overlay">
+                <span class="product-category">Fashion</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Cyber Streetwear Jacket</h3>
+              <p class="product-description">
+                Limited edition cyberpunk-inspired jacket with LED accent strips
+                and weather-resistant nano coating.
+              </p>
+              <div class="product-footer">
+                <div class="price-rating">
+                  <span class="product-price" data-price="15769">₹15,769</span>
+                  <div class="rating">
+                    <span class="star">⭐</span>
+                    <span class="rating-value">4.6</span>
+                  </div>
+                </div>
+                <div class="product-buttons">
+                  <button class="add-to-cart-btn" onclick="addToCart(2)">
+                    Add to Cart
+                  </button>
+                  <button class="view-details-btn">
+                    View Details
+                    <span class="btn-arrow">→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-product-id="3">
+            <div class="product-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=200&fit=crop"
+                alt="Holographic Display Monitor"
+                class="product-image"
+              />
+              <div class="product-overlay">
+                <span class="product-category">Tech</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Holographic Display Monitor</h3>
+              <p class="product-description">
+                Revolutionary 32-inch holographic display with true floating
+                imagery. Perfect for designers and content creators.
+              </p>
+              <div class="product-footer">
+                <div class="price-rating">
+                  <span class="product-price" data-price="107899"
+                    >₹1,07,899</span
+                  >
+                  <div class="rating">
+                    <span class="star">⭐</span>
+                    <span class="rating-value">4.9</span>
+                  </div>
+                </div>
+                <div class="product-buttons">
+                  <button class="add-to-cart-btn" onclick="addToCart(3)">
+                    Add to Cart
+                  </button>
+                  <button class="view-details-btn">
+                    View Details
+                    <span class="btn-arrow">→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-product-id="4">
+            <div class="product-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=300&h=200&fit=crop"
+                alt="Neural Enhancement Glasses"
+                class="product-image"
+              />
+              <div class="product-overlay">
+                <span class="product-category">Wearables</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Neural Enhancement Glasses</h3>
+              <p class="product-description">
+                AR glasses with built-in AI assistant and real-time information
+                overlay. See the world enhanced.
+              </p>
+              <div class="product-footer">
+                <div class="price-rating">
+                  <span class="product-price" data-price="74699">₹74,699</span>
+                  <div class="rating">
+                    <span class="star">⭐</span>
+                    <span class="rating-value">4.7</span>
+                  </div>
+                </div>
+                <div class="product-buttons">
+                  <button class="add-to-cart-btn" onclick="addToCart(4)">
+                    Add to Cart
+                  </button>
+                  <button class="view-details-btn">
+                    View Details
+                    <span class="btn-arrow">→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-product-id="5">
+            <div class="product-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300&h=200&fit=crop"
+                alt="Gravity-Defying Sneakers"
+                class="product-image"
+              />
+              <div class="product-overlay">
+                <span class="product-category">Footwear</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Gravity-Defying Sneakers</h3>
+              <p class="product-description">
+                Revolutionary footwear with magnetic levitation technology for
+                the ultimate walking experience.
+              </p>
+              <div class="product-footer">
+                <div class="price-rating">
+                  <span class="product-price" data-price="41499">₹41,499</span>
+                  <div class="rating">
+                    <span class="star">⭐</span>
+                    <span class="rating-value">4.5</span>
+                  </div>
+                </div>
+                <div class="product-buttons">
+                  <button class="add-to-cart-btn" onclick="addToCart(5)">
+                    Add to Cart
+                  </button>
+                  <button class="view-details-btn">
+                    View Details
+                    <span class="btn-arrow">→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view-all-container">
+          <button class="view-all-btn">
+            View All Products
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay">
+      <div class="cart-sidebar">
+        <div class="cart-header">
+          <h3 class="cart-title">Shopping Cart</h3>
+          <button class="close-cart-btn" id="closeCartBtn">✕</button>
+        </div>
+
+        <div class="cart-content" id="cartContent">
+          <div class="empty-cart" id="emptyCart">
+            <div class="empty-cart-icon">🛒</div>
+            <h4>Your cart is empty</h4>
+            <p>Add some futuristic products to get started!</p>
+          </div>
+
+          <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically inserted here -->
+          </div>
+        </div>
+
+        <div class="cart-footer" id="cartFooter" style="display: none">
+          <div class="cart-summary">
+            <div class="cart-total">
+              <span class="total-label">Total:</span>
+              <span class="total-amount" id="cartTotal">₹0</span>
+            </div>
+            <div class="cart-actions">
+              <button class="clear-cart-btn" onclick="clearCart()">
+                Clear Cart
+              </button>
+              <button class="checkout-btn" onclick="checkout()">
+                Checkout
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+      <div class="why-choose-container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Why Choose <span class="title-gradient">NeoCommerce</span>
+          </h2>
+          <p class="section-subtitle">
+            Experience the future of online shopping with features that redefine
+            excellence
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="icon">⚡</span>
+            </div>
+            <h3 class="feature-title">Lightning Fast</h3>
+            <p class="feature-description">
+              Experience instant loading and seamless navigation powered by
+              cutting-edge technology
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="icon">🛡️</span>
+            </div>
+            <h3 class="feature-title">Secure & Safe</h3>
+            <p class="feature-description">
+              Your data is protected with military-grade encryption and advanced
+              security protocols
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="icon">🚚</span>
+            </div>
+            <h3 class="feature-title">Fast Delivery</h3>
+            <p class="feature-description">
+              Get your orders delivered at warp speed with our premium logistics
+              network
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <span class="icon">⭐</span>
+            </div>
+            <h3 class="feature-title">Premium Quality</h3>
+            <p class="feature-description">
+              Every product is carefully curated and verified for excellence and
+              authenticity
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Enhanced Footer -->
+<!-- Simplified Footer -->
+<footer class="footer">
+    <div class="footer-background">
+        <div class="footer-particles"></div>
+    </div>
+    
+    <div class="footer-content">
+        <div class="footer-container">
+            <!-- Main Footer Content -->
+            <div class="footer-main">
+                <!-- Company Info -->
+                <div class="footer-section company-info">
+                    <div class="footer-logo">
+                        <div class="logo-icon">⚡</div>
+                        <span class="logo-text">NeoCommerce</span>
+                    </div>
+                    <p class="company-tagline">Experience Tomorrow</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">📺</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="section-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-section">
+                    <h4 class="section-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#track">Track Order</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#chat" class="live-chat">Live Chat</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-section contact-info">
+                    <h4 class="section-title">Contact</h4>
+                    <div class="contact-details">
+                        <p>📍 Gurugram, Haryana</p>
+                        <p>📞 +91 98765 43210</p>
+                        <p>✉️ hello@neocommerce.com</p>
+                        <p class="support-hours">🕒 24/7 Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <div class="footer-bottom-content">
+                <p class="copyright">© 2024 NeoCommerce. The future of shopping is here.</p>
+                <div class="footer-links-inline">
+                    <a href="#privacy">Privacy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#refund">Refund</a>
+                </div>
+                <div class="payment-badges">
+                    <span>💳 Secure Payments</span>
+                    <span>🔒 SSL Protected</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

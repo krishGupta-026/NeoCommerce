@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NeoCommerce</title>
+    <link rel="stylesheet" href="login-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="background-container">
+        <div class="particles-bg"></div>
+        <div class="grid-overlay"></div>
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <!-- Header -->
+        <header class="login-header">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <span class="logo-text">NeoCommerce</span>
+            </div>
+        </header>
+
+        <!-- Login Form -->
+        <div class="login-form-container">
+            <div class="login-card">
+                <div class="login-card-header">
+                    <h1 class="login-title">
+                        Welcome to the <span class="title-gradient">Future</span>
+                    </h1>
+                    <p class="login-subtitle">
+                        Sign in to access your account and experience tomorrow's shopping today
+                    </p>
+                </div>
+
+                <form class="login-form" id="loginForm">
+                    <!-- Email Field -->
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="input-icon">📧</span>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Enter your email"
+                                required
+                                autocomplete="email"
+                            >
+                            <label for="email" class="floating-label">Email Address</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="form-group">
+                        <div class="input-container">
+                            <span class="input-icon">🔒</span>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                class="form-input" 
+                                placeholder="Enter your password"
+                                required
+                                autocomplete="current-password"
+                            >
+                            <label for="password" class="floating-label">Password</label>
+                            <button type="button" class="password-toggle" id="passwordToggle">
+                                <span class="toggle-icon">👁️</span>
+                            </button>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="error-message" id="passwordError"></div>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-indicator">
+                                <div class="strength-bar"></div>
+                                <div class="strength-bar"></div>
+                                <div class="strength-bar"></div>
+                                <div class="strength-bar"></div>
+                            </div>
+                            <span class="strength-text">Password strength</span>
+                        </div>
+                    </div>
+
+                    <!-- Options Row -->
+                    <div class="form-options">
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="rememberMe" name="rememberMe" class="custom-checkbox">
+                            <label for="rememberMe" class="checkbox-label">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                        </div>
+                        <a href="#forgot-password" class="forgot-link">Forgot Password?</a>
+                    </div>
+
+                    <!-- Login Button -->
+                    <button type="submit" class="login-btn" id="loginBtn">
+                        <span class="btn-text">Sign In</span>
+                        <span class="btn-loading" style="display: none;">
+                            <div class="loading-spinner"></div>
+                            Signing In...
+                        </span>
+                        <div class="btn-glow"></div>
+                    </button>
+
+                    <!-- Divider -->
+                    <div class="divider">
+                        <span class="divider-text">or continue with</span>
+                    </div>
+
+                    <!-- Social Login -->
+                    <div class="social-login">
+                        <button type="button" class="social-btn google-btn">
+                            <span class="social-icon">🚀</span>
+                            Google
+                        </button>
+                        <button type="button" class="social-btn github-btn">
+                            <span class="social-icon">⭐</span>
+                            GitHub
+                        </button>
+                        <button type="button" class="social-btn apple-btn">
+                            <span class="social-icon">🍎</span>
+                            Apple
+                        </button>
+                    </div>
+
+                    <!-- Register Link -->
+                    <div class="register-link">
+                        <span class="register-text">New to NeoCommerce?</span>
+                        <a href="#register" class="register-btn">Create Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="login-footer">
+            <p>© 2024 NeoCommerce. The future of shopping is here.</p>
+        </footer>
+    </div>
+
+    <!-- Success/Error Toast -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Demo User Credentials -->
+    <div class="demo-credentials">
+        <div class="demo-card">
+            <h4>Demo Credentials</h4>
+            <p><strong>Email:</strong> demo@neocommerce.com</p>
+            <p><strong>Password:</strong> future@123</p>
+            <button onclick="fillDemoCredentials()" class="demo-btn">Use Demo Login</button>
+        </div>
+    </div>
+
+    <script src="login-script.js"></script>
+</body>
+</html>

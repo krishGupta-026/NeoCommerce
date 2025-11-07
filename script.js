@@ -6,26 +6,26 @@ class NeoCommerceCart {
     this.products = {
       1: {
         id: 1,
-        name: "Quantum Gaming Headset",
-        price: 24899,
+        name: "Luminous Solar On-Grid/GTI Solar Inverter",
+        price: 45769,
         image:
-          "https://images.unsplash.com/photo-1577174881658-0f30ed549adc?w=300&h=200&fit=crop",
+          "solar invereter.webp",
         category: "Gaming",
       },
       2: {
         id: 2,
-        name: "Cyber Streetwear Jacket",
-        price: 15769,
+        name: "Luminous Solar Combo",
+        price: 25769,
         image:
-          "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=300&h=200&fit=crop",
+          "solar combo.jpg",
         category: "Fashion",
       },
       3: {
         id: 3,
-        name: "Holographic Display Monitor",
-        price: 107899,
+        name: "Solar Charge Controller",
+        price: 1000,
         image:
-          "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=200&fit=crop",
+          "controllernew.webp",
         category: "Tech",
       },
       4: {
